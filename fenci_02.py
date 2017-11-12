@@ -10,7 +10,7 @@ def delete_space(stopwordspath):
     return stw_list
 
 f1 = open("150518it23974.txt")
-f2 = open("fenci_150518it23974.txt",'a')
+f2 = open("fenci_150518it23974.txt", 'w')
 
 lines = f1.readlines()
 '''
@@ -29,7 +29,7 @@ for line in lines:
         if (flag == 'Ng') or (flag=='n') or (flag=='nr') or (flag=='ns') or (flag=='nt') or (flag=='nz') or (flag=='vn'):
             text = text + '\n'+ str(word.encode('utf8')) + ' ' + str(flag)
 
-print(text)
+#print(text)
 
 f2.write(text)
 
